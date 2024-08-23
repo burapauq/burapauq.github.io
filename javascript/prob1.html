@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script >
+        function showPrimes(n) {
+            let primes = [];
+            for (let i=2; i <= n; i++) {
+                if (!isPrimes(i)) continue;
+                primes.push(i);
+            }
+            return primes;
+        }
+
+        function isPrimes(n) {
+            for (let i = 2; i < n; i++) {
+                if (n % i ==0 ) return false;
+            }
+            return true;
+        }
+
+        while(true) {
+            let positiveInt = prompt("Enter a positive integer");
+            if (positiveInt > 0 &&  positiveInt % 1 == 0) {
+                alert("For n = " + positiveInt + " prime numbers are " + showPrimes(positiveInt))
+                break;
+            } 
+        } 
+    </script>
+</head>
+<body>
+    <h1>Prime Numbers Finder!</h1>
+    <p>Write the web app to prompt accepting for a positive integer number</p>
+    <ul>
+        <li>If the entered text is not a positive integer number, then the web app will keep asking for a number until the valid positive integer is entered</li>
+        <li>If the entered text is a positive integer, then the app will print prime numbers that are not greater than that given positive integer</li>
+    </ul>
+    <p>Hint:</p>
+    <ul>
+        <li type="1">you may want to use loop with label</li>
+        <li type="1">you may want to use array with push function</li>
+    </ul>
+</body>
+</html>
