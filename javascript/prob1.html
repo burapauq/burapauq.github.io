@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Prime Numbers Finder!</title>
     <script >
         function showPrimes(n) {
             let primes = [];
@@ -21,10 +21,13 @@
             return true;
         }
 
+        let positiveInt;
+        let input;
         while(true) {
-            let positiveInt = prompt("Enter a positive integer");
+            input = prompt("Enter a positive integer");
+            positiveInt = input;
             if (positiveInt > 0 &&  positiveInt % 1 == 0) {
-                alert("For n = " + positiveInt + " prime numbers are " + showPrimes(positiveInt))
+                alert(`For n = ${positiveInt} prime numbers are ${showPrimes(positiveInt)}`)
                 break;
             } 
         } 
